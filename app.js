@@ -3,6 +3,7 @@ submitBtn.addEventListener("click", function (event) {
     event.preventDefault();
     // Get the handle from the input field
     const handle = handleInput.value;
+    document.getElementById("container").innerHTML=`<p></p>`;
     fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=1`)
     .then(response => response.json())
     .then(data => {
