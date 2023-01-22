@@ -1,0 +1,19 @@
+#user_id{
+    text-align: center;
+}
+#handle{
+    height: 50px;
+    width: 500px;
+    border: 2px solid purple;
+    border-radius: 4px;
+}
+#submitBtn{
+    height: 30px;
+    width: 60px;
+    margin-left: 660px;
+    margin-top: 15px;
+    background-color:cornsilk;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}

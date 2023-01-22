@@ -1,0 +1,39 @@
+const handleInput=document.getElementById("handle");
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    // Get the handle from the input field
+    const handle = handleInput.value;
+    fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=1`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      console.log(data.result[0].id);
+      continuous(data.result[0].id,handle);  
+    })
+
+});
+
+function continuous(id,handle){
+  setInterval(function(){
+    console.log(id);
+    fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=1`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if(data.result[0].id!=id){
+        if(data.result[0].verdict=="OK"){
+          alert("Great ,You nailed it");
+          id=data.result[0].id;
+        }else{
+          alert("oops try again");
+          id=data.result[0].id;
+        }
+      } 
+    })
+
+  },5000);
+}
+    
+
+    
+

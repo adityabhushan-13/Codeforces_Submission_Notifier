@@ -1,0 +1,11 @@
+{
+    "name": "Codeforces_Submission Notifier",
+    "version": "1.0.0",
+    "description": "It will get the info about user's submission and respond accordingly",
+    "manifest_version": 3,
+    "author": "Aditya Bhushan",
+    "action":{
+        "default_popup": "/index.html",
+        "default_title": "Codeforces_Submission"
+    }
+}

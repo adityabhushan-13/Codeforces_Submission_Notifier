@@ -1,0 +1,1 @@
+This extension will ask for your Codeforces handle and will pop up a wrong or success message on new submission.This website will fetch handle info from Codeforces API and responds only when new submission is made and show status message accordingly.
