@@ -10,6 +10,7 @@ submitBtn.addEventListener("click", function (event) {
       console.log(data);
       console.log(data.result[0].id);
       continuous(data.result[0].id,handle);  
+      document.body.innerHTML=`<h1><a href="http://www.codeforces.com">Go to Codeforces</a></h1>`
     })
 
 });
@@ -23,10 +24,10 @@ function continuous(id,handle){
       console.log(data);
       if(data.result[0].id!=id){
         if(data.result[0].verdict=="OK"){
-          alert("Great ,You nailed it");
+          alert("Great ,You nailed it!");
           id=data.result[0].id;
         }else{
-          alert("oops try again");
+          alert("OOPS Try Again!");
           id=data.result[0].id;
         }
       } 
